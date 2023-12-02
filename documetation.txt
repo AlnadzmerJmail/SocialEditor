@@ -1,0 +1,91 @@
+NOTES:
+ID -- is no longer prefer to use
+Button element -- does not able to inherit font-family automatically
+Image -- has aspect ratio -- so when setting its width and height you should use object-fit
+	     -- object-fit:cover
+
+
+https://caniuse.com -- is a resource for browser supports
+
+
+FITFALLS OF SELECTING HTML ELEMENTS
+	-- will possiblu have style clashes
+	-- other may change the element being used in html
+	-- other may overrides style unintentionally
+
+
+
+
+Project Overview
+
+1. Header
+	- height : 55px
+	- flex
+
+	Logo
+		- align-self : center -- makes the logo smaller and fit with other items
+
+	4th dd-toggle
+		- margin-left : auto -- to move to the right side
+
+	dd-toggle__img -- profile pic
+	
+		- width and height : 30px
+		- object-fit : cover --- important when giving width and height to img element
+
+
+2. Sidebar
+	- width : 75px  
+
+	Menu
+		menu___button:before
+			- width : 3px -- the blue line in the selected menu___button
+			- height : 100%
+			- absolute
+
+	Footer
+		- transform : rotate(-90deg) -- to make it displayed vertically
+
+
+3. Panel
+	width : 350px -- panel and sidebar has foxed width so that when screen resizes
+	                 only the main content will adjust/resizes
+
+    Panel Images
+
+		panel__img
+			- width and height : 140px
+			- gap : 8px
+
+			-- panel width(350) minus its padding(31px) is equal to iamges width(280) + the gap
+			-- 350 - 62 === 280 + 8
+
+
+3. Main
+	- flex : 1 -- make it occupies the spce
+
+	Infobar -- 2nd header
+		- height : 50px 
+
+	
+	Artboard -- wrapper of main contents
+		- column-gap : 20px -- space between the tools and canvas
+
+		canvas
+			- width : 48.6vw
+			- height : 57.5vh
+
+			Canvas Circle -- the white dot in each edge
+				- width and height : 15px
+				- absolute
+				- approximate calcultion for its positioon
+ 
+        
+		tools
+			- height -- same with canvas 57.5vh
+
+			tool
+				- width and heigh : 44px
+
+
+
