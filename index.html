@@ -55,12 +55,8 @@
 				<i class="fas fa-bell dd-toggle__icon"></i>
 			</button>
 			<button class="dd-toggle">
-				<img
-					src="https://images.unsplash.com/photo-1614247484197-9c6164bb532f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&fit=crop&w=60&q=100"
-					alt="User Profile"
-					class="dd-toggle__img"
-				/>
-				<span class="dd-toggle__text">James 0.</span>
+				<img src="lalone.jpg" alt="User Profile" class="dd-toggle__img" />
+				<span class="dd-toggle__text">Lalone</span>
 			</button>
 		</header>
 
@@ -86,9 +82,7 @@
 				</section>
 
 				<footer class="footer">
-					<small class="copyright">
-						&copy; 2023 SocialEditor. All rights reserved
-					</small>
+					<small class="copyright"> </small>
 				</footer>
 			</div>
 
@@ -179,5 +173,28 @@
 				</div>
 			</main>
 		</div>
+		<script>
+			const daysOfWeek = [
+				'Sunday',
+				'Monday',
+				'Tuesday',
+				'Wednesday',
+				'Thursday',
+				'Friday',
+				'Saturday',
+			];
+			const currentDate = new Date();
+			const year = currentDate.getFullYear();
+			const dayOfWeek = currentDate.getDay();
+
+			const dayName = daysOfWeek[dayOfWeek];
+
+			const breadCrumbEl = document.querySelector('.breadcrumbs__name');
+			breadCrumbEl.textContent = `Happy-hour-${dayName}`;
+
+			const copyrightEl = document.querySelector('.copyright');
+			copyrightEl.textContent = `\u00A9 ${year} alnadzmerjamil.com. All rights reserved`;
+			// &copy; 2023 alnadzmerjamil.com. All rights reserved
+		</script>
 	</body>
 </html>
